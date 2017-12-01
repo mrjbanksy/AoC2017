@@ -22,6 +22,7 @@ public class Day1Part2 {
 				sum += curLoc;
 			}
 		}
+		// Since each match will occur twice, double the sum
 		return sum*2;
 	}
 
