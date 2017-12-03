@@ -58,7 +58,7 @@ public class Day2Part2 {
 			}
 		}
 		
-		throw new Exception("Couldn't find evenly dividing numbers in this line.");
+		throw new Exception("Couldn't find evenly dividing numbers in this line: " + intList.toString());
 	}
 
 }
