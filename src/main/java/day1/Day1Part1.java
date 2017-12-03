@@ -1,5 +1,8 @@
 package day1;
 
+import java.io.InputStream;
+import java.util.Scanner;
+
 /**
  * Advent of Code 2017 Day 1 Part 1: Given a string, find the sum of all digits
  * that match the next digit in the list. The list is circular, so the digit
@@ -9,16 +12,24 @@ package day1;
  *
  */
 public class Day1Part1 {
+	private static final String inputFile = "/day1/input.txt";
 
 	public static void main(String[] args) {
-		if (args.length != 1) {
-			System.out.println("Incorrect command line arguments");
-			return;
-		}
-
-		String input = args[0];
+		String input = getInputString();
 		int sum = checkStringForMatches(input);
 		System.out.println("The sum of the matching characters is: " + sum);
+	}
+
+	private static String getInputString() {
+		InputStream inputFileStream = Day1Part1.class.getResourceAsStream(inputFile);
+		if (inputFileStream == null) {
+			System.out.println("Unable to open file at " + inputFile);
+			System.exit(1);
+		}
+		Scanner inputScanner = new Scanner(inputFileStream);
+		String input = inputScanner.next();
+		inputScanner.close();
+		return input;
 	}
 
 	private static int checkStringForMatches(String input) {
