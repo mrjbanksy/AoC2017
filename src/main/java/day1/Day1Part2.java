@@ -1,4 +1,4 @@
-package aocDay1;
+package day1;
 
 public class Day1Part2 {
 
@@ -7,7 +7,7 @@ public class Day1Part2 {
 			System.out.println("Incorrect command line arguments");
 			return;
 		}
-		
+
 		String input = args[0];
 		int sum = checkStringForMatches(input);
 		System.out.println("The sum of the matching characters is: " + sum);
@@ -23,7 +23,7 @@ public class Day1Part2 {
 			}
 		}
 		// Since each match will occur twice, double the sum
-		return sum*2;
+		return sum * 2;
 	}
 
 }
