@@ -1,5 +1,13 @@
 package day1;
 
+/**
+ * Advent of Code 2017 Day 1 Part 1: Given a string, find the sum of all digits
+ * that match the next digit in the list. The list is circular, so the digit
+ * after the last digit is the first digit in the list.
+ * 
+ * @author Jeremy Banks
+ *
+ */
 public class Day1Part1 {
 
 	public static void main(String[] args) {
@@ -15,17 +23,13 @@ public class Day1Part1 {
 
 	private static int checkStringForMatches(String input) {
 		int sum = 0;
-		for (int i = 0; i < input.length() - 1; i++) {
+		int length = input.length();
+		for (int i = 0; i < length; i++) {
 			int curLoc = Character.getNumericValue(input.charAt(i));
-			int curLocPlusOne = Character.getNumericValue(input.charAt(i + 1));
+			int curLocPlusOne = Character.getNumericValue(input.charAt((i + 1) % length));
 			if (curLoc == curLocPlusOne) {
 				sum += curLoc;
 			}
-		}
-		int firstInt = Character.getNumericValue(input.charAt(0));
-		int lastInt = Character.getNumericValue(input.charAt(input.length() - 1));
-		if (firstInt == lastInt) {
-			sum += lastInt;
 		}
 		return sum;
 	}

@@ -1,5 +1,13 @@
 package day1;
 
+/**
+ * Advent of Code 2017 Day 1 Part 1: Given a string, find the sum of all digits
+ * that match the digit halfway around the list. The list is circular, so the
+ * digit after the last digit is the first digit in the list.
+ * 
+ * @author Jeremy Banks
+ *
+ */
 public class Day1Part2 {
 
 	public static void main(String[] args) {
@@ -15,15 +23,15 @@ public class Day1Part2 {
 
 	private static int checkStringForMatches(String input) {
 		int sum = 0;
-		for (int i = 0; i < input.length() / 2; i++) {
+		int length = input.length();
+		for (int i = 0; i < length; i++) {
 			int curLoc = Character.getNumericValue(input.charAt(i));
-			int curLocPlusHalfSize = Character.getNumericValue(input.charAt(i + (input.length() / 2)));
+			int curLocPlusHalfSize = Character.getNumericValue(input.charAt((i + length / 2) % length));
 			if (curLoc == curLocPlusHalfSize) {
 				sum += curLoc;
 			}
 		}
-		// Since each match will occur twice, double the sum
-		return sum * 2;
+		return sum;
 	}
 
 }
