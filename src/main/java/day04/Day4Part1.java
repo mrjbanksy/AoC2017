@@ -1,14 +1,14 @@
-package day4;
+package day04;
 
 import java.io.InputStream;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-import day2.Day2Part1;
+import day02.Day2Part1;
 
 public class Day4Part1 {
-	private static final String inputFile = "/day4/input.txt";
+	private static final String inputFile = "/day04/input.txt";
 
 	public static void main(String[] args) {
 		InputStream inputFileStream = Day2Part1.class.getResourceAsStream(inputFile);

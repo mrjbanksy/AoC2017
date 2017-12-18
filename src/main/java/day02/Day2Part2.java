@@ -1,4 +1,4 @@
-package day2;
+package day02;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ import java.util.Scanner;
  *
  */
 public class Day2Part2 {
-	private static final String inputFile = "/day2/input.txt";
+	private static final String inputFile = "/day02/input.txt";
 
 	public static void main(String[] args) throws Exception {
 		InputStream inputFileStream = Day2Part2.class.getResourceAsStream(inputFile);
