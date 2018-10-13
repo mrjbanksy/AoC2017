@@ -14,7 +14,7 @@ public class Day6Part2 {
 	private static List<Integer> secondaryStartingPoint;
 
 	public static void main(String[] args) {
-		InputStream inputFileStream = Day2Part1.class.getResourceAsStream(inputFile);
+		InputStream inputFileStream = Day6Part2.class.getResourceAsStream(inputFile);
 		if (inputFileStream == null) {
 			System.out.println("Unable to open file at " + inputFile);
 			System.exit(1);

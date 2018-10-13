@@ -7,13 +7,11 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
-import day02.Day2Part1;
-
 public class Day6Part1 {
 	private static final String inputFile = "/day06/input.txt";
 
 	public static void main(String[] args) {
-		InputStream inputFileStream = Day2Part1.class.getResourceAsStream(inputFile);
+		InputStream inputFileStream = Day6Part1.class.getResourceAsStream(inputFile);
 		if (inputFileStream == null) {
 			System.out.println("Unable to open file at " + inputFile);
 			System.exit(1);
